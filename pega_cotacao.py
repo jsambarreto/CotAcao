@@ -20,5 +20,5 @@ def pega_cotacao(arq: str):
         cotacaoDiaLista[f'{empresa}']=float("{:.2f}".format(cotacao_dia))
         normalized_df=(cotacao-cotacao.mean())/cotacao.std()
         normalized_df["Adj Close"].plot(figsize=(10,8), label=empresa, linewidth=4).legend()
-    plt.savefig('grafico.svg')
+    plt.savefig('static/grafico.svg')
     return cotacaoDiaLista
